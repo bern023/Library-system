@@ -1,0 +1,1 @@
+set(__QT_DEPLOY_TARGET_Library_System_FILE C:/Users/Admin/Documents/Yoobee-Stuff/Library_System/build/Android_Qt_6_7_1_Clang_x86-Debug/libLibrary_System_x86.so)
