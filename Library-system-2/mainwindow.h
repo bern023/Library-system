@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QStackedWidget>//for stacked widgets/pages
+#include <QtGui>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -18,7 +20,14 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
+
+   /* void page1Widget();
+    void page2Widget();
+*/
+
+    void on_pushButton_admin_clicked();
+
+    void on_pushButton_bckhome_clicked();
 
 private:
     Ui::MainWindow *ui;
