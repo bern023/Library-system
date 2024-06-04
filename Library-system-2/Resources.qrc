@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/new/icons">
+        <file>icons/10261335_back_player_multimedia_icon.png</file>
+    </qresource>
+</RCC>
