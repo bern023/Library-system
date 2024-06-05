@@ -21,9 +21,6 @@ public:
 
 private slots:
 
-   /* void page1Widget();
-    void page2Widget();
-*/
 
     void on_pushButton_admin_clicked();
 
