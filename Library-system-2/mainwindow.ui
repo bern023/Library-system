@@ -101,7 +101,7 @@
             </layout>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton">
+            <widget class="QPushButton" name="pushButton_login">
              <property name="text">
               <string>Login</string>
              </property>
