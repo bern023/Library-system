@@ -2,4 +2,8 @@
     <qresource prefix="/new/icons">
         <file>icons/10261335_back_player_multimedia_icon.png</file>
     </qresource>
+    <qresource prefix="/">
+        <file>Library-data/Books.txt</file>
+        <file>Library-data/Users.txt</file>
+    </qresource>
 </RCC>

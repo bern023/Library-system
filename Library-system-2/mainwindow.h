@@ -26,7 +26,12 @@ private slots:
 
     void on_pushButton_bckhome_clicked();
 
+    void on_pushButton_login_clicked();
+
 private:
     Ui::MainWindow *ui;
+     bool bLogin(const QString email, const QString password);
 };
+
+
 #endif // MAINWINDOW_H
