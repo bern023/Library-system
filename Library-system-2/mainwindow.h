@@ -28,6 +28,8 @@ private slots:
 
     void on_pushButton_login_clicked();
 
+    void on_pushButton_bckadmin_clicked();
+
 private:
     Ui::MainWindow *ui;
      bool bLogin(const QString email, const QString password);

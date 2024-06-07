@@ -60,3 +60,11 @@ void MainWindow::on_pushButton_login_clicked()
 
 }
 
+
+void MainWindow::on_pushButton_bckadmin_clicked()
+{
+     ui->stackedWidget->setCurrentIndex(1);
+}
+
+
+
