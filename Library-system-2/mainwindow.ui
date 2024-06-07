@@ -257,12 +257,12 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit"/>
+              <widget class="QLineEdit" name="lineEdit_admincode"/>
              </item>
             </layout>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_3">
+            <widget class="QPushButton" name="pushButton_adminlogin">
              <property name="text">
               <string>Login</string>
              </property>
@@ -382,28 +382,28 @@ image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);</string>
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton">
+            <widget class="QPushButton" name="pushButton_addmodUser">
              <property name="text">
               <string>Add or Modify Users</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_2">
+            <widget class="QPushButton" name="pushButton_addmodBook">
              <property name="text">
               <string>Add or Modify Books</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_4">
+            <widget class="QPushButton" name="pushButton_overdue">
              <property name="text">
               <string>See Overdue books</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_5">
+            <widget class="QPushButton" name="pushButton_logs">
              <property name="text">
               <string>System Logs</string>
              </property>
@@ -493,7 +493,7 @@ image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);</string>
          <string>Add or Modify Book</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_8">
+       <widget class="QPushButton" name="pushButton_bckadminMan">
         <property name="geometry">
          <rect>
           <x>10</x>

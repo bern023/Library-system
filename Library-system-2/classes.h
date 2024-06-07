@@ -1,6 +1,5 @@
 #ifndef CLASSES_H
 #define CLASSES_H
-#include "ui_mainwindow.h"
 #include <QMainWindow>
 #include <QTextStream>
 #include <QMessageBox>
