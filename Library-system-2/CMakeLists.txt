@@ -18,7 +18,7 @@ set(PROJECT_SOURCES
         mainwindow.h
         mainwindow.ui
 	Resources.qrc
-        Library-data
+
 
 )
 

@@ -5,5 +5,6 @@
     <qresource prefix="/">
         <file>Library-data/Books.txt</file>
         <file>Library-data/Users.txt</file>
+        <file>Library-data/admin.txt</file>
     </qresource>
 </RCC>

@@ -30,9 +30,17 @@ private slots:
 
     void on_pushButton_bckadmin_clicked();
 
+    void on_pushButton_adminlogin_clicked();
+
+    void on_pushButton_addmodBook_clicked();
+
+    void on_pushButton_bckadminMan_clicked();
+
 private:
     Ui::MainWindow *ui;
-     bool bLogin(const QString email, const QString password);
+    //Braedan M
+     bool bLogin(const QString username, const QString password);
+     bool aLogin(const QString username, const QString password, const QString code);
 };
 
 
