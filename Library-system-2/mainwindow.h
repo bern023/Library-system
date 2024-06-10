@@ -36,6 +36,8 @@ private slots:
 
     void on_pushButton_bckadminMan_clicked();
 
+    void on_pushButton_3_clicked();
+
 private:
     Ui::MainWindow *ui;
     //Braedan M

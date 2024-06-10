@@ -117,3 +117,9 @@ void MainWindow::on_pushButton_bckadminMan_clicked()
     ui->stackedWidget->setCurrentIndex(2);
 }
 
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
