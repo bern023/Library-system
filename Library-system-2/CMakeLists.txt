@@ -18,8 +18,7 @@ set(PROJECT_SOURCES
         mainwindow.h
         mainwindow.ui
 	Resources.qrc
-
-
+        classes.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

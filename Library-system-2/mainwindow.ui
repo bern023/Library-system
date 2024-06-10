@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>295</width>
-    <height>468</height>
+    <width>316</width>
+    <height>480</height>
    </rect>
   </property>
   <property name="font">
@@ -22,8 +22,21 @@
    <layout class="QHBoxLayout" name="horizontalLayout_3">
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
+      <property name="font">
+       <font>
+        <family>Lato</family>
+        <pointsize>11</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 11pt &quot;Lato&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(217, 217, 217);</string>
+      </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="page_1">
        <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -65,8 +78,12 @@
               <font>
                <family>Lato</family>
                <pointsize>16</pointsize>
-               <bold>true</bold>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 16pt &quot;Lato&quot;;</string>
              </property>
              <property name="text">
               <string>Login</string>
@@ -84,7 +101,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_username"/>
+            <widget class="QLineEdit" name="lineEdit_username">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(244, 244, 244);</string>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QLabel" name="label_2">
@@ -96,12 +117,19 @@
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_4">
              <item>
-              <widget class="QLineEdit" name="lineEdit_password"/>
+              <widget class="QLineEdit" name="lineEdit_password">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(244, 244, 244);</string>
+               </property>
+              </widget>
              </item>
             </layout>
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_login">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(190, 190, 190);</string>
+             </property>
              <property name="text">
               <string>Login</string>
              </property>
@@ -138,6 +166,9 @@
         </item>
         <item>
          <widget class="QPushButton" name="pushButton_admin">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(190, 190, 190);</string>
+          </property>
           <property name="text">
            <string>Admin</string>
           </property>
@@ -165,7 +196,8 @@
           <item>
            <widget class="QPushButton" name="pushButton_bckhome">
             <property name="styleSheet">
-             <string notr="true">image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);</string>
+             <string notr="true">image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);
+background-color: rgb(217, 217, 217);</string>
             </property>
             <property name="text">
              <string/>
@@ -212,8 +244,12 @@
               <font>
                <family>Lato</family>
                <pointsize>16</pointsize>
-               <bold>true</bold>
+               <italic>false</italic>
+               <bold>false</bold>
               </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 16pt &quot;Lato&quot;;</string>
              </property>
              <property name="text">
               <string>Admin Login</string>
@@ -231,7 +267,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_username_2"/>
+            <widget class="QLineEdit" name="lineEdit_username_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(244, 244, 244);</string>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QLabel" name="label_6">
@@ -243,7 +283,11 @@
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_6">
              <item>
-              <widget class="QLineEdit" name="lineEdit_password_2"/>
+              <widget class="QLineEdit" name="lineEdit_password_2">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(244, 244, 244);</string>
+               </property>
+              </widget>
              </item>
             </layout>
            </item>
@@ -257,12 +301,20 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_admincode"/>
+              <widget class="QLineEdit" name="lineEdit_admincode">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(244, 244, 244);</string>
+               </property>
+              </widget>
              </item>
             </layout>
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_adminlogin">
+             <property name="styleSheet">
+              <string notr="true">
+background-color: rgb(217, 217, 217);</string>
+             </property>
              <property name="text">
               <string>Login</string>
              </property>
@@ -319,7 +371,7 @@
           <item>
            <widget class="QPushButton" name="pushButton_bckadmin">
             <property name="styleSheet">
-             <string notr="true">
+             <string notr="true">background-color: rgb(190, 190, 190);
 image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);</string>
             </property>
             <property name="text">
@@ -347,6 +399,9 @@ image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);</string>
           <property name="title">
            <string/>
           </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
           <layout class="QVBoxLayout" name="verticalLayout_9">
            <item>
             <spacer name="verticalSpacer_10">
@@ -363,6 +418,17 @@ image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);</string>
            </item>
            <item alignment="Qt::AlignHCenter">
             <widget class="QLabel" name="label_8">
+             <property name="font">
+              <font>
+               <family>Lato</family>
+               <pointsize>16</pointsize>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 16pt &quot;Lato&quot;;</string>
+             </property>
              <property name="text">
               <string>Admin Management</string>
              </property>
@@ -383,6 +449,9 @@ image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);</string>
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_addmodUser">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(190, 190, 190);</string>
+             </property>
              <property name="text">
               <string>Add or Modify Users</string>
              </property>
@@ -390,6 +459,9 @@ image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);</string>
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_addmodBook">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(190, 190, 190);</string>
+             </property>
              <property name="text">
               <string>Add or Modify Books</string>
              </property>
@@ -397,6 +469,9 @@ image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);</string>
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_overdue">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(190, 190, 190);</string>
+             </property>
              <property name="text">
               <string>See Overdue books</string>
              </property>
@@ -404,6 +479,9 @@ image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);</string>
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_logs">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(190, 190, 190);</string>
+             </property>
              <property name="text">
               <string>System Logs</string>
              </property>
@@ -441,74 +519,649 @@ image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);</string>
        </layout>
       </widget>
       <widget class="QWidget" name="page_4">
-       <widget class="QGroupBox" name="groupBox_4">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>100</y>
-          <width>181</width>
-          <height>80</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string/>
-        </property>
-        <widget class="QPushButton" name="pushButton_6">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>20</y>
-           <width>101</width>
-           <height>24</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Add New Book</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_7">
-         <property name="geometry">
-          <rect>
-           <x>30</x>
-           <y>50</y>
-           <width>131</width>
-           <height>24</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Modify Exsisting Book</string>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QLabel" name="label_9">
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>60</y>
-          <width>111</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Add or Modify Book</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_bckadminMan">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>70</y>
-          <width>41</width>
-          <height>24</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
+       <layout class="QVBoxLayout" name="verticalLayout_11">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QPushButton" name="pushButton_bckadminMan">
+            <property name="styleSheet">
+             <string notr="true">image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);
+background-color: rgb(190, 190, 190);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(217, 217, 217);</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_10">
+           <item>
+            <spacer name="verticalSpacer_18">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_9">
+             <property name="font">
+              <font>
+               <family>Lato</family>
+               <pointsize>16</pointsize>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);
+font: 16pt &quot;Lato&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Add or Modify Book</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_14">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Minimum</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushbutton_admin_a_book">
+             <property name="palette">
+              <palette>
+               <active>
+                <colorrole role="WindowText">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>0</red>
+                   <green>0</green>
+                   <blue>0</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="Button">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>190</red>
+                   <green>190</green>
+                   <blue>190</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="Text">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>0</red>
+                   <green>0</green>
+                   <blue>0</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="ButtonText">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>0</red>
+                   <green>0</green>
+                   <blue>0</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="Base">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>190</red>
+                   <green>190</green>
+                   <blue>190</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="Window">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>190</red>
+                   <green>190</green>
+                   <blue>190</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="PlaceholderText">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="128">
+                   <red>0</red>
+                   <green>0</green>
+                   <blue>0</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+               </active>
+               <inactive>
+                <colorrole role="WindowText">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>0</red>
+                   <green>0</green>
+                   <blue>0</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="Button">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>190</red>
+                   <green>190</green>
+                   <blue>190</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="Text">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>0</red>
+                   <green>0</green>
+                   <blue>0</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="ButtonText">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>0</red>
+                   <green>0</green>
+                   <blue>0</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="Base">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>190</red>
+                   <green>190</green>
+                   <blue>190</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="Window">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>190</red>
+                   <green>190</green>
+                   <blue>190</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="PlaceholderText">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="128">
+                   <red>0</red>
+                   <green>0</green>
+                   <blue>0</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+               </inactive>
+               <disabled>
+                <colorrole role="WindowText">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>0</red>
+                   <green>0</green>
+                   <blue>0</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="Button">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>190</red>
+                   <green>190</green>
+                   <blue>190</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="Text">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>0</red>
+                   <green>0</green>
+                   <blue>0</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="ButtonText">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>0</red>
+                   <green>0</green>
+                   <blue>0</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="Base">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>190</red>
+                   <green>190</green>
+                   <blue>190</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="Window">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>190</red>
+                   <green>190</green>
+                   <blue>190</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+                <colorrole role="PlaceholderText">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="128">
+                   <red>0</red>
+                   <green>0</green>
+                   <blue>0</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+               </disabled>
+              </palette>
+             </property>
+             <property name="font">
+              <font>
+               <family>Lato</family>
+               <pointsize>11</pointsize>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(190, 190, 190);
+color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Add Book</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushbutton_admin_m_book">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(190, 190, 190);
+color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Modify Book</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_13">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_16">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_5">
+       <layout class="QVBoxLayout" name="verticalLayout_13">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="styleSheet">
+             <string notr="true">image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);
+background-color: rgb(190, 190, 190);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="title">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_12">
+           <item>
+            <spacer name="verticalSpacer_20">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Minimum</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_10">
+             <property name="styleSheet">
+              <string notr="true">font: 16pt &quot;Lato&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Add or Modify User</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_17">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Minimum</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_new_user">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(190, 190, 190);</string>
+             </property>
+             <property name="text">
+              <string>Add New User</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_modify_user">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(190, 190, 190);</string>
+             </property>
+             <property name="text">
+              <string>Modify Exsisting User</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_21">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_19">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Maximum</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>76</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_6">
+       <layout class="QVBoxLayout" name="verticalLayout_15">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="styleSheet">
+             <string notr="true">image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);
+background-color: rgb(190, 190, 190);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_14">
+           <item>
+            <spacer name="verticalSpacer_24">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_11">
+             <property name="styleSheet">
+              <string notr="true">font: 16pt &quot;Lato&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Add New User</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_25">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Username</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(254, 254, 254);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>Password</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(254, 254, 254);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>Address</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_3">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(254, 254, 254);</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_23">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -520,7 +1173,7 @@ image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>295</width>
+     <width>316</width>
      <height>17</height>
     </rect>
    </property>
