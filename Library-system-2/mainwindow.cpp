@@ -117,9 +117,52 @@ void MainWindow::on_pushButton_bckadminMan_clicked()
     ui->stackedWidget->setCurrentIndex(2);
 }
 
-
-void MainWindow::on_pushButton_3_clicked()
+void MainWindow::on_pushButton_bckadminMan_2_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(2);
+     ui->stackedWidget->setCurrentIndex(2);
 }
+
+
+void MainWindow::on_pushButton_new_user_clicked()
+{
+     ui->stackedWidget->setCurrentIndex(5);
+}
+
+
+void MainWindow::on_pushButton_addmodUser_clicked()
+{
+     ui->stackedWidget->setCurrentIndex(4);
+}
+
+
+void MainWindow::on_pushButton_bckaddmodU_clicked()
+{
+     ui->stackedWidget->setCurrentIndex(4);
+}
+
+void MainWindow::on_pushButton_bckaddmodU_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
+}
+
+/*void Library::addBook(QString title, QString author, int amount){
+    books.push_back(Book(title, author, amount));
+}
+*/
+void MainWindow::on_pushButton_addBook_clicked()
+{
+    /*
+    QString bookName = ui->lineEdit_bookTitle->text();
+    QString bookAuthor = ui->lineEdit_bookAuthor->text();
+    QString bookAmount = ui->lineEdit_bookAmount->text();
+    Library::books.push_back(Book(bookName, bookAuthor, bookAmount));
+*/
+}
+
+
+
+
+
+
+
 
