@@ -5,23 +5,23 @@
 #include <QMessageBox>
 #include <QTextStream>
 #include <QFile>
+#include <QVector>
+#include <QString>
 using namespace std;
-class Library{
-private:
-    //User: user;
-    //Book: book;
-    //vector<Book> catalogue;
 
-   // void addUser(name, address) {}
-    // void addBook(bookName, authorName)
+/*class Book{
+private:
+    QString title, author;
+    int amount;
+public:
+     Book(const QString title, const QString author, const int amount);
 };
 
-/*class Login{
-private:
+class Library{
 
 public:
-
-
+    void addBook(QString title, QString author, int amount);
+    QVector<Book> books;
 
 };
 */

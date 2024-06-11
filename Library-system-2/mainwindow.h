@@ -36,7 +36,17 @@ private slots:
 
     void on_pushButton_bckadminMan_clicked();
 
-    void on_pushButton_3_clicked();
+    void on_pushButton_bckadminMan_2_clicked();
+
+    void on_pushButton_new_user_clicked();
+
+    void on_pushButton_addmodUser_clicked();
+
+    void on_pushButton_bckaddmodU_clicked();
+
+    void on_pushButton_addBook_clicked();
+
+    void on_pushButton_bckaddmodU_2_clicked();
 
 private:
     Ui::MainWindow *ui;
