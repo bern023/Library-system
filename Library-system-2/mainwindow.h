@@ -12,7 +12,7 @@ class MainWindow;
 QT_END_NAMESPACE
 
 class Book{
-private:
+public://CHANGE THIS TO PRIVATE WHEN FIXEDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
     QString title, author, amount;
 
 public:
@@ -63,7 +63,7 @@ private slots:
 
     void on_pushButton_addBook_clicked();
 
-    void on_pushButton_bckaddmodU_2_clicked();
+    void on_pushButton_bckaddmodB_clicked();
 
     void on_pushButton_bckmenu_clicked();
 
@@ -71,6 +71,12 @@ private slots:
 
     void on_pushButton_account_clicked();
 
+
+    void on_pushButton_bckaddmodbook_clicked();
+
+    void on_pushbutton_admin_m_book_clicked();
+
+    void on_pushbutton_admin_a_book_clicked();
 
 private:
     Ui::MainWindow *ui;

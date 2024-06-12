@@ -7,6 +7,7 @@
 #include <QFile>
 #include <QVector>
 #include <QString>
+#include <QDebug>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -21,7 +22,6 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-
 
 
 //Braedan M
@@ -148,24 +148,29 @@ void MainWindow::on_pushButton_bckaddmodU_clicked()
      ui->stackedWidget->setCurrentIndex(4);
 }
 
-void MainWindow::on_pushButton_bckaddmodU_2_clicked()
+void MainWindow::on_pushButton_bckaddmodB_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(4);
+    ui->stackedWidget->setCurrentIndex(3);
 }
 
-/*void Library::addBook(QString title, QString author, int amount){
-    books.push_back(Book(title, author, amount));
-}
-*/
 
+//Braedan M
+//takes user input and adds a new book object in vector.
 void MainWindow::on_pushButton_addBook_clicked()
 {
-
     QString bookName = ui->lineEdit_bookTitle->text();
     QString bookAuthor = ui->lineEdit_bookAuthor->text();
     QString bookAmount = ui->lineEdit_bookAmount->text();
     library.books.push_back(Book(bookName, bookAuthor, bookAmount));
-
+    qDebug() << "Button clicked!";
+    qDebug() << "Book Name:" << bookName;
+    qDebug() << "Book Author:" << bookAuthor;
+    qDebug() << "Book Amount:" << bookAmount;
+    for (const Book& book : library.books) {
+        qDebug() << "Title:" << book.title;
+        qDebug() << "Author:" << book.author;
+        qDebug() << "Amount:" << book.amount;
+    }
 }
 
 void MainWindow::on_pushButton_bckmenu_clicked()
@@ -186,4 +191,38 @@ void MainWindow::on_pushButton_account_clicked()
 }
 
 
+
+
+void MainWindow::on_pushButton_bckaddmodbook_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
+}
+
+
+void MainWindow::on_pushbutton_admin_m_book_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(10);
+
+    QVector<int> books; // Replace with your QVector<Book> data
+
+    // Convert the QVector to a formatted string
+    QString formattedText;
+    for (int i = 0; i < books.size(); ++i) {
+        if (i > 0) {
+            formattedText += " "; // Add a space separator
+        }
+        formattedText += QString::number(books[i]);
+    }
+
+    // Set the formatted string as the text of the QPlainTextEdit
+    ui->plainTextEdit_bookVector->setPlainText(formattedText);
+
+    qDebug() << "Button clicked!";
+
+}
+
+void MainWindow::on_pushbutton_admin_a_book_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(6);
+}
 
