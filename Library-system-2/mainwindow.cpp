@@ -1,7 +1,12 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-#include "classes.h"
-
+//#include "classes.h"
+#include <QTextStream>
+#include <QMessageBox>
+#include <QTextStream>
+#include <QFile>
+#include <QVector>
+#include <QString>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -16,6 +21,9 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
+
 //Braedan M
 //switches pages
 void MainWindow::on_pushButton_admin_clicked()
@@ -56,7 +64,7 @@ void MainWindow::on_pushButton_login_clicked()
     QString password = ui->lineEdit_password->text();
     if(bLogin(username, password)) {//if true display message and change page
         QMessageBox::information(this, "Login Successful", "Logged in Successfully");
-        ui->stackedWidget->setCurrentIndex(1);
+        ui->stackedWidget->setCurrentIndex(7);
 
     } else {//if false display warning message
         QMessageBox::warning(this, "Login Failed", "Invalid username or password");
@@ -149,20 +157,33 @@ void MainWindow::on_pushButton_bckaddmodU_2_clicked()
     books.push_back(Book(title, author, amount));
 }
 */
+
 void MainWindow::on_pushButton_addBook_clicked()
 {
-    /*
+
     QString bookName = ui->lineEdit_bookTitle->text();
     QString bookAuthor = ui->lineEdit_bookAuthor->text();
     QString bookAmount = ui->lineEdit_bookAmount->text();
-    Library::books.push_back(Book(bookName, bookAuthor, bookAmount));
-*/
+    library.books.push_back(Book(bookName, bookAuthor, bookAmount));
+
+}
+
+void MainWindow::on_pushButton_bckmenu_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(7);
 }
 
 
+void MainWindow::on_pushButton_menu_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(8);
+}
 
 
-
+void MainWindow::on_pushButton_account_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(9);
+}
 
 
 

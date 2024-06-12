@@ -48,6 +48,12 @@ private slots:
 
     void on_pushButton_bckaddmodU_2_clicked();
 
+    void on_pushButton_bckmenu_clicked();
+
+    void on_pushButton_menu_clicked();
+
+    void on_pushButton_account_clicked();
+
 private:
     Ui::MainWindow *ui;
     //Braedan M
@@ -55,5 +61,20 @@ private:
      bool aLogin(const QString username, const QString password, const QString code);
 };
 
+class Book{
+private:
+    QString title, author;
+    int amount;
+public:
+    Book(const QString title, const QString author, const int amount);
+};
+
+class Library{
+
+public:
+    //void addBook(QString title, QString author, int amount);
+    QVector<Book> books;
+
+};
 
 #endif // MAINWINDOW_H
