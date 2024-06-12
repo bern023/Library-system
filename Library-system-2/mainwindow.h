@@ -11,6 +11,22 @@ class MainWindow;
 }
 QT_END_NAMESPACE
 
+class Book{
+private:
+    QString title, author, amount;
+
+public:
+    Book(const QString title, const QString author, const QString amount){};
+};
+
+class Library{
+
+public:
+    //void addBook(QString title, QString author, int amount);
+    QVector<Book> books;
+
+};
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -18,6 +34,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
 
 private slots:
 
@@ -48,12 +65,22 @@ private slots:
 
     void on_pushButton_bckaddmodU_2_clicked();
 
+    void on_pushButton_bckmenu_clicked();
+
+    void on_pushButton_menu_clicked();
+
+    void on_pushButton_account_clicked();
+
+
 private:
     Ui::MainWindow *ui;
     //Braedan M
      bool bLogin(const QString username, const QString password);
      bool aLogin(const QString username, const QString password, const QString code);
+
+     Library library;
 };
+
 
 
 #endif // MAINWINDOW_H
