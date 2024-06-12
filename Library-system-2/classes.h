@@ -9,7 +9,7 @@
 #include <QString>
 using namespace std;
 
-class Book{
+/*class Book{
 private:
     QString title, author;
     int amount;
@@ -24,5 +24,5 @@ public:
     QVector<Book> books;
 
 };
-
+*/
 #endif // CLASSES_H
