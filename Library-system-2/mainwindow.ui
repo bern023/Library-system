@@ -36,7 +36,7 @@ color: rgb(0, 0, 0);
 background-color: rgb(217, 217, 217);</string>
       </property>
       <property name="currentIndex">
-       <number>6</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="page_1">
        <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -1273,20 +1273,6 @@ background-color: rgb(190, 190, 190);</string>
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_18">
              <item>
-              <widget class="QLabel" name="label_18">
-               <property name="text">
-                <string>Quantity:</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="lineEdit_bookAmount">
-               <property name="styleSheet">
-                <string notr="true">background-color: rgb(255, 255, 255);</string>
-               </property>
-              </widget>
-             </item>
-             <item>
               <spacer name="verticalSpacer_22">
                <property name="orientation">
                 <enum>Qt::Vertical</enum>
@@ -1409,7 +1395,7 @@ background-color: rgb(190, 190, 190);</string>
           <string/>
          </property>
         </widget>
-        <widget class="QWidget" name="">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
            <x>0</x>
@@ -1438,7 +1424,7 @@ background-color: rgb(190, 190, 190);</string>
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
            <x>160</x>
@@ -1674,11 +1660,24 @@ background-color: rgb(217, 217, 217);</string>
         <widget class="QPlainTextEdit" name="plainTextEdit_bookVector">
          <property name="geometry">
           <rect>
-           <x>30</x>
+           <x>10</x>
            <y>70</y>
-           <width>231</width>
-           <height>261</height>
+           <width>261</width>
+           <height>231</height>
           </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_bookmod">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>320</y>
+           <width>80</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Modify</string>
          </property>
         </widget>
        </widget>

@@ -23,7 +23,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
 //Braedan M
 //switches pages
 void MainWindow::on_pushButton_admin_clicked()
@@ -105,7 +104,7 @@ void MainWindow::on_pushButton_adminlogin_clicked()
     QString code = ui->lineEdit_admincode->text();
     if(aLogin(username, password, code)) {
         QMessageBox::information(this, "Login Successful", "Logged in Successfully");
-        ui->stackedWidget->setCurrentIndex(3);
+        ui->stackedWidget->setCurrentIndex(2);
 
     } else {
         QMessageBox::warning(this, "Login Failed", "Invalid username, password or code");
@@ -154,24 +153,21 @@ void MainWindow::on_pushButton_bckaddmodB_clicked()
 }
 
 
+
 //Braedan M
 //takes user input and adds a new book object in vector.
 void MainWindow::on_pushButton_addBook_clicked()
 {
     QString bookName = ui->lineEdit_bookTitle->text();
     QString bookAuthor = ui->lineEdit_bookAuthor->text();
-    QString bookAmount = ui->lineEdit_bookAmount->text();
-    library.books.push_back(Book(bookName, bookAuthor, bookAmount));
+    library.books.push_back(Book(bookName, bookAuthor));
+    QMessageBox::information(this, "Book Added", "Book Added Successfully");
     qDebug() << "Button clicked!";
     qDebug() << "Book Name:" << bookName;
     qDebug() << "Book Author:" << bookAuthor;
-    qDebug() << "Book Amount:" << bookAmount;
-    for (const Book& book : library.books) {
-        qDebug() << "Title:" << book.title;
-        qDebug() << "Author:" << book.author;
-        qDebug() << "Amount:" << book.amount;
-    }
 }
+
+
 
 void MainWindow::on_pushButton_bckmenu_clicked()
 {
@@ -198,31 +194,51 @@ void MainWindow::on_pushButton_bckaddmodbook_clicked()
     ui->stackedWidget->setCurrentIndex(3);
 }
 
+void MainWindow::on_pushbutton_admin_a_book_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(6);
+}
 
 void MainWindow::on_pushbutton_admin_m_book_clicked()
 {
     ui->stackedWidget->setCurrentIndex(10);
 
-    QVector<int> books; // Replace with your QVector<Book> data
-
-    // Convert the QVector to a formatted string
-    QString formattedText;
-    for (int i = 0; i < books.size(); ++i) {
-        if (i > 0) {
-            formattedText += " "; // Add a space separator
-        }
-        formattedText += QString::number(books[i]);
+    QString str;
+    for (const Book& book : library.books) {
+        str += book.getTitle() + ", " + book.getAuthor() + "\n";
     }
 
-    // Set the formatted string as the text of the QPlainTextEdit
-    ui->plainTextEdit_bookVector->setPlainText(formattedText);
+    ui->plainTextEdit_bookVector->setPlainText(str);
 
     qDebug() << "Button clicked!";
 
 }
 
-void MainWindow::on_pushbutton_admin_a_book_clicked()
+
+
+
+void MainWindow::on_plainTextEdit_bookVector_textChanged()
 {
-    ui->stackedWidget->setCurrentIndex(6);
+    QString modifiedText = ui->plainTextEdit_bookVector->toPlainText();
+
+    QStringList lines = modifiedText.split('\n');
+    QVector<Book> updatedBooks;
+    for (const QString& line : lines) {
+
+        QStringList parts = line.split(", ");
+        if (parts.size() == 2) {
+            QString title = parts[0];
+            QString author = parts[1];
+            updatedBooks.append(Book(title, author));
+        }
+    }
+
+    library.books = updatedBooks;
+}
+
+
+void MainWindow::on_pushButton_bookmod_clicked()
+{
+  QMessageBox::information(this, "Books Modifed", "Books Modifed Successfully!");
 }
 

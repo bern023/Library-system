@@ -12,19 +12,25 @@ class MainWindow;
 QT_END_NAMESPACE
 
 class Book{
-public://CHANGE THIS TO PRIVATE WHEN FIXEDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+private:
     QString title, author, amount;
 
 public:
-    Book(const QString title, const QString author, const QString amount){};
+    Book( const QString Title, const QString Author) : title(Title), author(Author){}
+
+    QString getTitle() const{
+        return title;
+    };
+    QString getAuthor() const{
+        return author;
+    };
 };
 
 class Library{
 
 public:
-    //void addBook(QString title, QString author, int amount);
-    QVector<Book> books;
 
+    QVector<Book> books;
 };
 
 class MainWindow : public QMainWindow
@@ -77,6 +83,11 @@ private slots:
     void on_pushbutton_admin_m_book_clicked();
 
     void on_pushbutton_admin_a_book_clicked();
+
+    void on_plainTextEdit_bookVector_textChanged();
+
+    void on_pushButton_bookmod_clicked();
+
 
 private:
     Ui::MainWindow *ui;
