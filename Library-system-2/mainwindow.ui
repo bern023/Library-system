@@ -19,7 +19,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_19">
+   <layout class="QHBoxLayout" name="horizontalLayout_9">
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="font">
@@ -36,11 +36,7 @@ color: rgb(0, 0, 0);
 background-color: rgb(217, 217, 217);</string>
       </property>
       <property name="currentIndex">
-
-       <number>18</number>
-
-       <number>10</number>
-
+       <number>16</number>
       </property>
       <widget class="QWidget" name="page_1">
        <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -1374,6 +1370,12 @@ background-color: rgb(190, 190, 190);</string>
          <layout class="QHBoxLayout" name="horizontalLayout_7">
           <item>
            <widget class="QLabel" name="label_20">
+            <property name="minimumSize">
+             <size>
+              <width>10</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="styleSheet">
              <string notr="true">image: url(:/new/icons/icons/book.png);</string>
             </property>
@@ -1599,72 +1601,68 @@ background-color: rgb(217, 217, 217);</string>
        </widget>
       </widget>
       <widget class="QWidget" name="page_11">
-       <widget class="QGroupBox" name="groupBox_11">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>40</y>
-          <width>281</width>
-          <height>361</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string/>
-        </property>
-        <widget class="QLabel" name="label_24">
-         <property name="geometry">
-          <rect>
-           <x>100</x>
-           <y>30</y>
-           <width>91</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Modify Book</string>
-         </property>
-        </widget>
-        <widget class="QPlainTextEdit" name="plainTextEdit_bookVector">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>70</y>
-           <width>261</width>
-           <height>231</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_bookmod">
-         <property name="geometry">
-          <rect>
-           <x>100</x>
-           <y>320</y>
-           <width>80</width>
-           <height>24</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Modify</string>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QPushButton" name="pushButton_bckaddmodbook">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>10</y>
-          <width>48</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);
+       <layout class="QVBoxLayout" name="verticalLayout_19">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QPushButton" name="pushButton_bckaddmodbook">
+            <property name="styleSheet">
+             <string notr="true">image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);
 background-color: rgb(217, 217, 217);</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_11">
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_23">
+           <item>
+            <widget class="QLabel" name="label_24">
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="text">
+              <string>Modify Book</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPlainTextEdit" name="plainTextEdit_bookVector"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_bookmod">
+             <property name="text">
+              <string>Modify</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="page_12">
        <widget class="QGroupBox" name="groupBox_12">
@@ -1847,7 +1845,74 @@ background-color: rgb(217, 217, 217);</string>
       <widget class="QWidget" name="page_14"/>
       <widget class="QWidget" name="page_15"/>
       <widget class="QWidget" name="page_16"/>
-      <widget class="QWidget" name="page_17"/>
+      <widget class="QWidget" name="page_17">
+       <widget class="QPushButton" name="pushButton_bckaddmodUser">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>48</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/new/icons/icons/10261335_back_player_multimedia_icon.png);
+background-color: rgb(217, 217, 217);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_16">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>281</width>
+          <height>361</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QLabel" name="label_26">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>30</y>
+           <width>91</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Modify Users</string>
+         </property>
+        </widget>
+        <widget class="QPlainTextEdit" name="plainTextEdit_userList">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>261</width>
+           <height>231</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_userMod">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>320</y>
+           <width>80</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Modify</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
       <widget class="QWidget" name="page_18"/>
       <widget class="QWidget" name="page_19"/>
      </widget>
