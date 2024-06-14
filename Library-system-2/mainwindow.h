@@ -39,16 +39,37 @@ private:
     bool availability;
 
 public:
+    FeatBook( const QString FeatTitle, const QString FeatAuthor) : title(FeatTitle), author(FeatAuthor) {
+        availability = 1;
+    }
     QString getTitle(){
         return title;
+    }
+    void setTitle(QString bookTitle){
+        title = bookTitle;
     }
     QString getAuthor(){
         return author;
     }
+    void setAuthor(QString bookAuthor){
+        author = bookAuthor;
+    }
+    bool getAvail(){
+        return availability;
+    }
+    void setAvail(bool bookAvail){
+        availability = bookAvail;
+    }
 };
-class BookLog{
+class BookLog {
 public:
     FeatBook bleach, america, bones, unrest;
+
+    BookLog()
+        : bleach("Bleach, vol.20", "Tite Kobe"),
+        america("America", "Rachel Khong"),
+        bones("Bones", "Renee Watson"),
+        unrest("Unrest", "Erik Larson") {}
 };
 
 class MainWindow : public QMainWindow
@@ -118,6 +139,8 @@ private:
      bool aLogin(const QString username, const QString password, const QString code);
 
      Library library;
+     BookLog booklog;
+
 };
 
 

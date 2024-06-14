@@ -254,8 +254,13 @@ void MainWindow::on_pushButton_feat_book_1_clicked()
 
 void MainWindow::on_pushButton_odr_book_clicked()
 {
-
-
+    if(booklog.bleach.getAvail()){
+        QMessageBox::information(this, "Book order successful", "Book ordered Successfully!");
+        booklog.bleach.setAvail(0);
+    }
+    else{
+        QMessageBox::information(this, "Book is unavailable", "Book is unavailabe at present!");
+    }
 
 }
 
