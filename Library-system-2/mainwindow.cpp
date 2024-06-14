@@ -36,9 +36,9 @@ void MainWindow::on_pushButton_bckhome_clicked()
     ui->stackedWidget->setCurrentIndex(0);
 }
 //Braedan M login file check
-bool MainWindow::bLogin(const QString username, const QString password){
+bool Login::bLogin(const QString username, const QString password){
 
-    QFile file(":/Library-data/Users.txt");//opens the file
+    QFile file("users.txt");//opens the file
     if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         QTextStream in(&file);//reads in the file
         while (!in.atEnd()) {
@@ -61,7 +61,7 @@ void MainWindow::on_pushButton_login_clicked()
 {//converts user input to readble text in the system
     QString username = ui->lineEdit_username->text();
     QString password = ui->lineEdit_password->text();
-    if(bLogin(username, password)) {//if true display message and change page
+    if(login.bLogin(username, password)) {//if true display message and change page
         QMessageBox::information(this, "Login Successful", "Logged in Successfully");
         ui->stackedWidget->setCurrentIndex(7);
 
@@ -78,7 +78,7 @@ void MainWindow::on_pushButton_bckadmin_clicked()
 }
 
 //Braedan M admin login
-bool MainWindow::aLogin(const QString username, const QString password, const QString code){
+bool Login::aLogin(const QString username, const QString password, const QString code){
 //same as basic log in but with an added code
     QFile file(":/Library-data/admin.txt");
     if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -102,7 +102,7 @@ void MainWindow::on_pushButton_adminlogin_clicked()
     QString username = ui->lineEdit_username_2->text();
     QString password = ui->lineEdit_password_2->text();
     QString code = ui->lineEdit_admincode->text();
-    if(aLogin(username, password, code)) {
+    if(login.aLogin(username, password, code)) {
         QMessageBox::information(this, "Login Successful", "Logged in Successfully");
         ui->stackedWidget->setCurrentIndex(2);
 
@@ -186,9 +186,6 @@ void MainWindow::on_pushButton_account_clicked()
     ui->stackedWidget->setCurrentIndex(9);
 }
 
-
-
-
 void MainWindow::on_pushButton_bckaddmodbook_clicked()
 {
     ui->stackedWidget->setCurrentIndex(3);
@@ -198,7 +195,7 @@ void MainWindow::on_pushbutton_admin_a_book_clicked()
 {
     ui->stackedWidget->setCurrentIndex(6);
 }
-
+//Braedan M
 void MainWindow::on_pushbutton_admin_m_book_clicked()
 {
     ui->stackedWidget->setCurrentIndex(10);
@@ -214,9 +211,7 @@ void MainWindow::on_pushbutton_admin_m_book_clicked()
 
 }
 
-
-
-
+//Braedan M
 void MainWindow::on_plainTextEdit_bookVector_textChanged()
 {
     QString modifiedText = ui->plainTextEdit_bookVector->toPlainText();
@@ -244,6 +239,7 @@ void MainWindow::on_pushButton_bookmod_clicked()
 
 
 
+
 //Bernadette
 
 void MainWindow::on_pushButton_feat_book_1_clicked()
@@ -256,6 +252,25 @@ void MainWindow::on_pushButton_odr_book_clicked()
 {
 
 
+
+//Braedan M
+void MainWindow::on_pushButton_addnewUser_clicked()
+{
+
+    QString username = ui->lineEdit_newUser->text();
+    QString password = ui->lineEdit_newPass->text();
+
+    QFile file("users.txt");
+    if (file.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text)) {
+        qDebug() << "File opened successfully!";
+        QTextStream out(&file);
+        out << username << " " << password << "\n";
+        file.close();
+        QMessageBox::information(this, "User Added", "User Added Successfully");
+    } else {
+        qDebug() << "Error opening the file!";
+        QMessageBox::critical(this, "Error", "Unable to open file for writing.");
+    }
 
 }
 
