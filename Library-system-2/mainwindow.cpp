@@ -242,3 +242,20 @@ void MainWindow::on_pushButton_bookmod_clicked()
   QMessageBox::information(this, "Books Modifed", "Books Modifed Successfully!");
 }
 
+
+
+//Bernadette
+
+void MainWindow::on_pushButton_feat_book_1_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(12);
+}
+
+
+void MainWindow::on_pushButton_odr_book_clicked()
+{
+
+
+
+}
+
