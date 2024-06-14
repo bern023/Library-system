@@ -31,6 +31,24 @@ public:
 
     QVector<Book> books;
 };
+//Bernadette
+class FeatBook{
+private:
+    QString title, author;
+    bool availability;
+
+public:
+    QString getTitle(){
+        return title;
+    }
+    QString getAuthor(){
+        return author;
+    }
+};
+class BookLog{
+public:
+    FeatBook bleach, america, bones, unrest;
+};
 
 //Braedan M
 
@@ -97,7 +115,12 @@ private slots:
     void on_pushButton_bookmod_clicked();
 
 
+    void on_pushButton_feat_book_1_clicked();
+
+    void on_pushButton_odr_book_clicked();
+
     void on_pushButton_addnewUser_clicked();
+
 
 private:
     Ui::MainWindow *ui;
