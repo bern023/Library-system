@@ -36,7 +36,7 @@ color: rgb(0, 0, 0);
 background-color: rgb(217, 217, 217);</string>
       </property>
       <property name="currentIndex">
-       <number>11</number>
+       <number>6</number>
       </property>
       <widget class="QWidget" name="page_1">
        <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -1373,7 +1373,7 @@ background-color: rgb(190, 190, 190);</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">image: url(:/new/icons/icons/homeicon2.png);</string>
+          <string notr="true">image: url(:/new/icons/icons/Element 2.png);</string>
          </property>
          <property name="text">
           <string/>
@@ -1854,7 +1854,7 @@ image: url(:/new/icons/icons/skin-and-bones-image.png);</string>
          </layout>
         </widget>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>-1</x>
@@ -2024,9 +2024,9 @@ image: url(:/new/icons/icons/skin-and-bones-image.png);</string>
         </widget>
        </widget>
       </widget>
-      <widget class="QWidget" name="page_14"/>
-      <widget class="QWidget" name="page_15"/>
-      <widget class="QWidget" name="page_16"/>
+      <widget class="QWidget" name="page_14_book_2"/>
+      <widget class="QWidget" name="page_15_book_3"/>
+      <widget class="QWidget" name="page_16_book_4"/>
       <widget class="QWidget" name="page_17"/>
       <widget class="QWidget" name="page_18"/>
       <widget class="QWidget" name="page_19"/>

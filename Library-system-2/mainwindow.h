@@ -132,6 +132,8 @@ private slots:
 
     void on_pushButton_odr_book_clicked();
 
+    void on_pushButton_new_clicked();
+
 private:
     Ui::MainWindow *ui;
     //Braedan M

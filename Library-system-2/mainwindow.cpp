@@ -254,6 +254,7 @@ void MainWindow::on_pushButton_feat_book_1_clicked()
 
 void MainWindow::on_pushButton_odr_book_clicked()
 {
+    //tracks if a book is already checked out or not
     if(booklog.bleach.getAvail()){
         QMessageBox::information(this, "Book order successful", "Book ordered Successfully!");
         booklog.bleach.setAvail(0);
@@ -262,5 +263,18 @@ void MainWindow::on_pushButton_odr_book_clicked()
         QMessageBox::information(this, "Book is unavailable", "Book is unavailabe at present!");
     }
 
+}
+
+
+void MainWindow::on_pushButton_new_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(18);
+    //outputs the contents of the vector
+    QString str;
+    for (const Book& book : library.books) {
+        str += book.getTitle() + ", " + book.getAuthor() + "\n";
+    }
+    //replaces the blank text edit with the output
+    ui->plainTextEdit_bookVector->setPlainText(str);
 }
 
