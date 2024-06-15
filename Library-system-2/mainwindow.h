@@ -152,6 +152,12 @@ private slots:
 
     void on_pushButton_userMod_clicked();
 
+    void on_pushButton_feat_book_2_clicked();
+
+    void on_pushButton_feat_book_3_clicked();
+
+    void on_pushButton_feat_book_4_clicked();
+
 private:
     Ui::MainWindow *ui;
     //Braedan M

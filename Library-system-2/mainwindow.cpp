@@ -343,3 +343,21 @@ void MainWindow::on_pushButton_new_clicked()
     ui->plainTextEdit_bookVector->setPlainText(str);
 }
 
+
+void MainWindow::on_pushButton_feat_book_2_clicked()
+{
+ ui->stackedWidget->setCurrentIndex(13);
+}
+
+
+void MainWindow::on_pushButton_feat_book_3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(14);
+}
+
+
+void MainWindow::on_pushButton_feat_book_4_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(15);
+}
+
