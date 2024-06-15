@@ -275,7 +275,7 @@ void MainWindow::on_pushbutton_feat_book_1_return_clicked()
 {
     QString logMessage = "Bleach, vol. 20 Tite Kobe";//takes the changes as a string
     //tracks if a book is already checked out or not
-    if(booklog.bleach.getAvail()){
+    if(booklog.bleach.getAvail()==false){
 
         QFile file("returnLogs.txt");//file is opened
         if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
@@ -488,7 +488,7 @@ void MainWindow::on_pushButton_feat_book_3_return_clicked()
 {
     QString logMessage = "Skin & Bones by Renee Watson";//takes the changes as a string
     //tracks if a book is already checked out or not
-    if(booklog.bleach.getAvail()){
+    if(booklog.bleach.getAvail()==false){
 
         QFile file("returnLogs.txt");//file is opened
         if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
@@ -536,7 +536,7 @@ void MainWindow::on_pushButton_feat_book_2_return_clicked()
 {
     QString logMessage = "Real Americans by Rachel Khong";//takes the changes as a string
     //tracks if a book is already checked out or not
-    if(booklog.bleach.getAvail()){
+    if(booklog.bleach.getAvail()==false){
 
         QFile file("returnLogs.txt");//file is opened
         if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
@@ -602,7 +602,7 @@ void MainWindow::on_pushButton_feat_book_4_return_clicked()
 {
     QString logMessage = "Demon of Unrest by Erik Larson";//takes the changes as a string
     //tracks if a book is already checked out or not
-    if(booklog.bleach.getAvail()){
+    if(booklog.bleach.getAvail()==false){
 
         QFile file("returnLogs.txt");//file is opened
         if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
@@ -618,6 +618,22 @@ void MainWindow::on_pushButton_feat_book_4_return_clicked()
     }
     else{
         QMessageBox::information(this, "Error", "Book isn't checked out!");
+    }
+}
+
+
+void MainWindow::on_pushbutton_returns_clicked()
+{
+    //this is similar to the book vector output but is for text
+    ui->stackedWidget->setCurrentIndex(17);
+    QFile file("returns.txt");//opens the file
+    if(file.open(QFile::ReadOnly | QFile::Text)){
+        qDebug() << "File opened successfully!";
+        QString fileContents = file.readAll();//reads the text out
+        ui->plainTextEdit_userList->setPlainText(fileContents);//chnages the plain text with the output
+    } else {//if openining the file fails
+        qDebug() << "Error opening the file!";
+        QMessageBox::critical(this, "Error", "Unable to open file.");
     }
 }
 
