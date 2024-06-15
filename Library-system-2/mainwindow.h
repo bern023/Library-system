@@ -10,7 +10,7 @@ namespace Ui {
 class MainWindow;
 }
 QT_END_NAMESPACE
-
+//Braedan M
 class Book{
 private:
     QString title, author, amount;
@@ -25,9 +25,8 @@ public:
         return author;
     };
 };
-
+//Braedan M
 class Library{
-
 public:
 
     QVector<Book> books;
@@ -71,6 +70,15 @@ public:
         bones("Bones", "Renee Watson"),
         unrest("Unrest", "Erik Larson") {}
 };
+
+//Braedan M
+
+class Login{
+public:
+    bool bLogin(const QString username, const QString password);
+    bool aLogin(const QString username, const QString password, const QString code);
+};
+
 
 class MainWindow : public QMainWindow
 {
@@ -132,16 +140,18 @@ private slots:
 
     void on_pushButton_odr_book_clicked();
 
+
     void on_pushButton_new_clicked();
+
+    void on_pushButton_addnewUser_clicked();
+
 
 private:
     Ui::MainWindow *ui;
     //Braedan M
-     bool bLogin(const QString username, const QString password);
-     bool aLogin(const QString username, const QString password, const QString code);
-
      Library library;
      BookLog booklog;
+     Login login;
 
 };
 

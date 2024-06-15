@@ -12,6 +12,7 @@
         <file>icons/real-americans-image.png</file>
         <file>icons/skin-and-bones-image.png</file>
         <file>icons/bleach-text.png</file>
+        <file>icons/Element 2.png</file>
     </qresource>
     <qresource prefix="/">
         <file>Library-data/Books.txt</file>
