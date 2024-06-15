@@ -11,13 +11,13 @@ class MainWindow;
 }
 QT_END_NAMESPACE
 //Braedan M
-class Book{
-private:
+class Book{//the book class is so the book objects can be created
+private://the variables are in the private access and can be accessed through the public functions
     QString title, author, amount;
 
-public:
+public://public access that includes the constructor for the book object
     Book( const QString Title, const QString Author) : title(Title), author(Author){}
-
+    //functions to access the book obkect private variables
     QString getTitle() const{
         return title;
     };
@@ -26,9 +26,9 @@ public:
     };
 };
 //Braedan M
-class Library{
+class Library{//library class holds the vecotr of stored book objects
 public:
-
+    //the vector for book objects is created here
     QVector<Book> books;
 };
 //Bernadette
@@ -73,8 +73,9 @@ public:
 
 //Braedan M
 
-class Login{
-public:
+class Login{//this is for the login functions
+public:/*these are the functions used for login that take in user input
+    and give a true or false if they are correct or not*/
     bool bLogin(const QString username, const QString password);
     bool aLogin(const QString username, const QString password, const QString code);
 };
@@ -91,7 +92,7 @@ public:
 
 private slots:
 
-
+    //when a slot is created, it is automatically declared here
     void on_pushButton_admin_clicked();
 
     void on_pushButton_bckhome_clicked();
@@ -124,7 +125,6 @@ private slots:
 
     void on_pushButton_account_clicked();
 
-
     void on_pushButton_bckaddmodbook_clicked();
 
     void on_pushbutton_admin_m_book_clicked();
@@ -135,7 +135,6 @@ private slots:
 
     void on_pushButton_bookmod_clicked();
 
-
     void on_pushButton_feat_book_1_clicked();
 
     void on_pushButton_odr_book_clicked();
@@ -145,13 +144,20 @@ private slots:
 
     void on_pushButton_addnewUser_clicked();
 
+    void on_pushButton_modify_user_clicked();
+
+    void on_pushButton_bckaddmodUser_clicked();
+
+    void on_plainTextEdit_userList_textChanged();
+
+    void on_pushButton_userMod_clicked();
 
 private:
     Ui::MainWindow *ui;
     //Braedan M
-     Library library;
      BookLog booklog;
-     Login login;
+     Library library;//creating a library object
+    Login login;//creating a login object
 
 };
 

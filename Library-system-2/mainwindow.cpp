@@ -1,15 +1,13 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-//#include "classes.h"
-#include <QTextStream>
-#include <QMessageBox>
-#include <QTextStream>
-#include <QFile>
-#include <QVector>
-#include <QString>
-#include <QDebug>
-
-
+#include <QTextStream>//for file handling
+#include <QMessageBox>//message windows
+#include <QFile>//for file handling
+#include <QVector>//so vectors can be used
+#include <QString>//for user typed input
+#include <QDebug>//check if things work
+//created by Braedan M and Bernadette W
+//preset system stuff
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -199,12 +197,12 @@ void MainWindow::on_pushbutton_admin_a_book_clicked()
 void MainWindow::on_pushbutton_admin_m_book_clicked()
 {
     ui->stackedWidget->setCurrentIndex(10);
-
+//outputs the contents of the vector
     QString str;
     for (const Book& book : library.books) {
         str += book.getTitle() + ", " + book.getAuthor() + "\n";
     }
-
+//replaces the blank text edit with the output
     ui->plainTextEdit_bookVector->setPlainText(str);
 
     qDebug() << "Button clicked!";
@@ -212,6 +210,7 @@ void MainWindow::on_pushbutton_admin_m_book_clicked()
 }
 
 //Braedan M
+//this function makes it so when the text edit is edited it updates the vector in real time
 void MainWindow::on_plainTextEdit_bookVector_textChanged()
 {
     QString modifiedText = ui->plainTextEdit_bookVector->toPlainText();
@@ -219,7 +218,8 @@ void MainWindow::on_plainTextEdit_bookVector_textChanged()
     QStringList lines = modifiedText.split('\n');
     QVector<Book> updatedBooks;
     for (const QString& line : lines) {
-
+//it will only save if it is typed as title, author
+//these are recognised as 2 parts split by a comma and space
         QStringList parts = line.split(", ");
         if (parts.size() == 2) {
             QString title = parts[0];
@@ -227,7 +227,7 @@ void MainWindow::on_plainTextEdit_bookVector_textChanged()
             updatedBooks.append(Book(title, author));
         }
     }
-
+//updates the vector
     library.books = updatedBooks;
 }
 
@@ -250,6 +250,7 @@ void MainWindow::on_pushButton_feat_book_1_clicked()
 
 void MainWindow::on_pushButton_odr_book_clicked()
 {
+
     //tracks if a book is already checked out or not
     if(booklog.bleach.getAvail()){
         QMessageBox::information(this, "Book order successful", "Book ordered Successfully!");
@@ -259,25 +260,74 @@ void MainWindow::on_pushButton_odr_book_clicked()
         QMessageBox::information(this, "Book is unavailable", "Book is unavailabe at present!");
     }
 }
+
+
+
+
+
 //Braedan M
 void MainWindow::on_pushButton_addnewUser_clicked()
 {
-
+//converts user input to qstring
     QString username = ui->lineEdit_newUser->text();
     QString password = ui->lineEdit_newPass->text();
-
+//opens (or creates if never run) the users.txt
     QFile file("users.txt");
+    //if the file opens it will write to the file
     if (file.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text)) {
         qDebug() << "File opened successfully!";
         QTextStream out(&file);
-        out << username << " " << password << "\n";
-        file.close();
+        out << "\n" << username << " " << password;//writes to the file separated by a space and goes down a line
+        file.close();//closes the file when it has finished
         QMessageBox::information(this, "User Added", "User Added Successfully");
-    } else {
+    } else { //if it fails an error will appear
         qDebug() << "Error opening the file!";
         QMessageBox::critical(this, "Error", "Unable to open file for writing.");
     }
+}
 
+//Braedan M
+void MainWindow::on_pushButton_modify_user_clicked()
+{
+    //this is similar to the book vector output but is for text
+    ui->stackedWidget->setCurrentIndex(16);
+    QFile file("users.txt");//opens the file
+    if(file.open(QFile::ReadOnly | QFile::Text)){
+        qDebug() << "File opened successfully!";
+    QString fileContents = file.readAll();//reads the text out
+    ui->plainTextEdit_userList->setPlainText(fileContents);//chnages the plain text with the output
+    } else {//if openining the file fails
+        qDebug() << "Error opening the file!";
+        QMessageBox::critical(this, "Error", "Unable to open file.");
+    }
+}
+
+
+void MainWindow::on_pushButton_bckaddmodUser_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
+}
+
+
+void MainWindow::on_plainTextEdit_userList_textChanged()
+{
+    //simiiar to the vector being changed from user input this is with text
+    QString modifiedText = ui->plainTextEdit_userList->toPlainText();//takes the changes as a string
+    QFile file("users.txt");//file is opened
+    if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QTextStream stream(&file);
+        stream << modifiedText;//writes to the text file
+        file.close();
+    }  else {//error if it can't be opened
+        qDebug() << "Error opening the file!";
+        QMessageBox::critical(this, "Error", "Unable to open file.");
+    }
+}
+
+
+void MainWindow::on_pushButton_userMod_clicked()
+{
+    QMessageBox::information(this, "Users Modifed", "Users Modifed Successfully!");
 }
 
 
