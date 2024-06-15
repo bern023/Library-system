@@ -204,6 +204,8 @@ private slots:
 
     void on_pushButton_feat_book_4_return_clicked();
 
+    void on_pushbutton_returns_clicked();
+
 private:
     Ui::MainWindow *ui;
     //Braedan M

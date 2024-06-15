@@ -45,7 +45,7 @@ color: rgb(0, 0, 0);
 background-color: rgb(217, 217, 217);</string>
       </property>
       <property name="currentIndex">
-       <number>12</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page_1">
        <layout class="QVBoxLayout" name="verticalLayout_3">
