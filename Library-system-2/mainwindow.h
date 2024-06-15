@@ -158,6 +158,52 @@ private slots:
 
     void on_pushButton_feat_book_4_clicked();
 
+    void on_pushButton_7_clicked();
+
+    void on_pushButton_back_feat_book_1_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_menu_feat_book_1_clicked();
+
+    void on_pushbutton_feat_book_1_return_clicked();
+
+    void on_pushButton_9_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_feat_book_2_home_clicked();
+
+    void on_pushButton_feat_book_2_menu_clicked();
+
+    void on_pushButton_feat_book_2_order_clicked();
+
+    void on_pushButton_feat_book_menu_clicked();
+
+    void on_pushButton_feat_book_home_2_clicked();
+
+    void on_pushButton_feat_book_3_back_clicked();
+
+    void on_pushButton_feat_book_3_home_clicked();
+
+    void on_pushButton_feat_book_3_menu_clicked();
+
+    void on_pushButton_feat_book_3_order_clicked();
+
+    void on_pushButton_feat_book_3_return_clicked();
+
+    void on_pushButton_feat_book_2_return_clicked();
+
+    void on_pushButton_feat_book_4_back_clicked();
+
+    void on_pushButton_feat_book_4_home_clicked();
+
+    void on_pushButton_feat_book_4_menu_clicked();
+
+    void on_pushButton_feat_book_4_order_clicked();
+
+    void on_pushButton_feat_book_4_return_clicked();
+
 private:
     Ui::MainWindow *ui;
     //Braedan M
