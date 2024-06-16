@@ -139,9 +139,6 @@ private slots:
 
     void on_pushButton_odr_book_clicked();
 
-
-    void on_pushButton_new_clicked();
-
     void on_pushButton_addnewUser_clicked();
 
     void on_pushButton_modify_user_clicked();
@@ -205,6 +202,23 @@ private slots:
     void on_pushButton_feat_book_4_return_clicked();
 
     void on_pushbutton_returns_clicked();
+
+    void on_pushButton_feat_book_2_back_clicked();
+
+    void on_pushButton_featured_clicked();
+
+    void on_pushButton_book_returns_back_clicked();
+
+
+    void on_pushButton_preorderedbooks_clicked();
+
+    void on_pushButton_bckhome_2_clicked();
+
+    void on_pushButton_feat_book_back_2_clicked();
+
+    void on_pushButton_logs_clicked();
+
+    void on_pushButton_new_clicked();
 
 private:
     Ui::MainWindow *ui;

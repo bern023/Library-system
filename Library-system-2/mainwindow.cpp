@@ -255,7 +255,7 @@ QString logMessage = "Bleach, vol. 20 Tite Kobe";//takes the changes as a string
     if(booklog.bleach.getAvail()){
 
         QFile file("orderLogs.txt");//file is opened
-        if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        if (file.open(QIODevice::WriteOnly | QIODevice::Append)) {
             QTextStream stream(&file);
             stream << logMessage;//writes to the text file
             file.close();
@@ -278,7 +278,7 @@ void MainWindow::on_pushbutton_feat_book_1_return_clicked()
     if(booklog.bleach.getAvail()==false){
 
         QFile file("returnLogs.txt");//file is opened
-        if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        if (file.open(QIODevice::WriteOnly | QIODevice::Append)) {
             QTextStream stream(&file);
             stream << logMessage;//writes to the text file
             file.close();
@@ -362,17 +362,6 @@ void MainWindow::on_pushButton_userMod_clicked()
 }
 
 
-void MainWindow::on_pushButton_new_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(18);
-    //outputs the contents of the vector
-    QString str;
-    for (const Book& book : library.books) {
-        str += book.getTitle() + ", " + book.getAuthor() + "\n";
-    }
-    //replaces the blank text edit with the output
-    ui->plainTextEdit_bookVector->setPlainText(str);
-}
 
 
 void MainWindow::on_pushButton_feat_book_2_clicked()
@@ -464,10 +453,10 @@ void MainWindow::on_pushButton_feat_book_3_order_clicked()
 {
     QString logMessage = "Skin & Bones by Renee Watson";//takes the changes as a string
     //tracks if a book is already checked out or not
-    if(booklog.bleach.getAvail()){
+    if(booklog.bones.getAvail()){
 
         QFile file("orderLogs.txt");//file is opened
-        if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        if (file.open(QIODevice::WriteOnly | QIODevice::Append)) {
             QTextStream stream(&file);
             stream << logMessage;//writes to the text file
             file.close();
@@ -476,7 +465,7 @@ void MainWindow::on_pushButton_feat_book_3_order_clicked()
             QMessageBox::critical(this, "Error", "Unable to open file.");
         }
         QMessageBox::information(this, "Book order successful", "Book ordered Successfully!");
-        booklog.bleach.setAvail(0);
+        booklog.bones.setAvail(0);
     }
     else{
         QMessageBox::information(this, "Book is unavailable", "Book is unavailabe at present!");
@@ -488,10 +477,10 @@ void MainWindow::on_pushButton_feat_book_3_return_clicked()
 {
     QString logMessage = "Skin & Bones by Renee Watson";//takes the changes as a string
     //tracks if a book is already checked out or not
-    if(booklog.bleach.getAvail()==false){
+    if(booklog.bones.getAvail()==false){
 
         QFile file("returnLogs.txt");//file is opened
-        if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        if (file.open(QIODevice::WriteOnly | QIODevice::Append)) {
             QTextStream stream(&file);
             stream << logMessage;//writes to the text file
             file.close();
@@ -500,7 +489,7 @@ void MainWindow::on_pushButton_feat_book_3_return_clicked()
             QMessageBox::critical(this, "Error", "Unable to open file.");
         }
         QMessageBox::information(this, "Book return successful", "Book Returned Successfully!");
-        booklog.bleach.setAvail(1);
+        booklog.bones.setAvail(1);
     }
     else{
         QMessageBox::information(this, "Error", "Book isn't checked out!");
@@ -512,10 +501,10 @@ void MainWindow::on_pushButton_feat_book_2_order_clicked()
 {
     QString logMessage = "Real Americans by Rachel Khong";//takes the changes as a string
     //tracks if a book is already checked out or not
-    if(booklog.bleach.getAvail()){
+    if(booklog.america.getAvail()){
 
         QFile file("orderLogs.txt");//file is opened
-        if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        if (file.open(QIODevice::WriteOnly | QIODevice::Append)) {
             QTextStream stream(&file);
             stream << logMessage;//writes to the text file
             file.close();
@@ -524,7 +513,7 @@ void MainWindow::on_pushButton_feat_book_2_order_clicked()
             QMessageBox::critical(this, "Error", "Unable to open file.");
         }
         QMessageBox::information(this, "Book order successful", "Book ordered Successfully!");
-        booklog.bleach.setAvail(0);
+        booklog.america.setAvail(0);
     }
     else{
         QMessageBox::information(this, "Book is unavailable", "Book is unavailabe at present!");
@@ -536,10 +525,10 @@ void MainWindow::on_pushButton_feat_book_2_return_clicked()
 {
     QString logMessage = "Real Americans by Rachel Khong";//takes the changes as a string
     //tracks if a book is already checked out or not
-    if(booklog.bleach.getAvail()==false){
+    if(booklog.america.getAvail()==false){
 
         QFile file("returnLogs.txt");//file is opened
-        if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        if (file.open(QIODevice::WriteOnly | QIODevice::Append)) {
             QTextStream stream(&file);
             stream << logMessage;//writes to the text file
             file.close();
@@ -548,7 +537,7 @@ void MainWindow::on_pushButton_feat_book_2_return_clicked()
             QMessageBox::critical(this, "Error", "Unable to open file.");
         }
         QMessageBox::information(this, "Book return successful", "Book Returned Successfully!");
-        booklog.bleach.setAvail(1);
+        booklog.america.setAvail(1);
     }
     else{
         QMessageBox::information(this, "Error", "Book isn't checked out!");
@@ -578,10 +567,10 @@ void MainWindow::on_pushButton_feat_book_4_order_clicked()
 {
     QString logMessage = "Demon of Unrest by Erik Larson";//takes the changes as a string
     //tracks if a book is already checked out or not
-    if(booklog.bleach.getAvail()){
+    if(booklog.unrest.getAvail()){
 
         QFile file("orderLogs.txt");//file is opened
-        if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        if (file.open(QIODevice::WriteOnly | QIODevice::Append)) {
             QTextStream stream(&file);
             stream << logMessage;//writes to the text file
             file.close();
@@ -590,7 +579,7 @@ void MainWindow::on_pushButton_feat_book_4_order_clicked()
             QMessageBox::critical(this, "Error", "Unable to open file.");
         }
         QMessageBox::information(this, "Book order successful", "Book ordered Successfully!");
-        booklog.bleach.setAvail(0);
+        booklog.unrest.setAvail(0);
     }
     else{
         QMessageBox::information(this, "Book is unavailable", "Book is unavailabe at present!");
@@ -602,10 +591,10 @@ void MainWindow::on_pushButton_feat_book_4_return_clicked()
 {
     QString logMessage = "Demon of Unrest by Erik Larson";//takes the changes as a string
     //tracks if a book is already checked out or not
-    if(booklog.bleach.getAvail()==false){
+    if(booklog.unrest.getAvail()==false){
 
         QFile file("returnLogs.txt");//file is opened
-        if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        if (file.open(QIODevice::WriteOnly | QIODevice::Append)) {
             QTextStream stream(&file);
             stream << logMessage;//writes to the text file
             file.close();
@@ -614,7 +603,7 @@ void MainWindow::on_pushButton_feat_book_4_return_clicked()
             QMessageBox::critical(this, "Error", "Unable to open file.");
         }
         QMessageBox::information(this, "Book return successful", "Book Returned Successfully!");
-        booklog.bleach.setAvail(1);
+        booklog.unrest.setAvail(1);
     }
     else{
         QMessageBox::information(this, "Error", "Book isn't checked out!");
@@ -624,16 +613,109 @@ void MainWindow::on_pushButton_feat_book_4_return_clicked()
 
 void MainWindow::on_pushbutton_returns_clicked()
 {
+
     //this is similar to the book vector output but is for text
     ui->stackedWidget->setCurrentIndex(17);
-    QFile file("returns.txt");//opens the file
+    QFile file("returnLogs.txt");//opens the file
     if(file.open(QFile::ReadOnly | QFile::Text)){
         qDebug() << "File opened successfully!";
         QString fileContents = file.readAll();//reads the text out
-        ui->plainTextEdit_userList->setPlainText(fileContents);//chnages the plain text with the output
+        ui->plainTextEdit_Return_books->setPlainText(fileContents);//chnages the plain text with the output
     } else {//if openining the file fails
         qDebug() << "Error opening the file!";
         QMessageBox::critical(this, "Error", "Unable to open file.");
     }
+}
+
+
+void MainWindow::on_pushButton_feat_book_2_back_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(11);
+}
+
+
+void MainWindow::on_pushButton_featured_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(11);
+}
+
+
+void MainWindow::on_pushButton_book_returns_back_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(9);
+}
+
+
+
+
+
+
+
+void MainWindow::on_pushButton_preorderedbooks_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(18);
+    QFile file("orderLogs.txt");//opens the file
+    if(file.open(QFile::ReadOnly | QFile::Text)){
+        qDebug() << "File opened successfully!";
+        QString fileContents = file.readAll();//reads the text out
+        ui->plainTextEdit_book_orders->setPlainText(fileContents);//chnages the plain text with the output
+    } else {//if openining the file fails
+        qDebug() << "Error opening the file!";
+        QMessageBox::critical(this, "Error", "Unable to open file.");
+
+
+    }
+}
+
+
+void MainWindow::on_pushButton_bckhome_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(7);
+}
+
+
+void MainWindow::on_pushButton_feat_book_back_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(7);
+}
+
+
+void MainWindow::on_pushButton_logs_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(19);
+    QFile orders("orderLogs.txt");//opens the file
+    if(orders.open(QFile::ReadOnly | QFile::Text)){
+        qDebug() << "File opened successfully!";
+        QString fileContents = orders.readAll();//reads the text out
+        ui->plainTextEdit_systemLog_orders->setPlainText(fileContents);//chnages the plain text with the output
+    } else {//if openining the file fails
+        qDebug() << "Error opening the file!";
+        QMessageBox::critical(this, "Error", "Unable to open file.");
+
+    }
+
+    QFile returns("returnLogs.txt");//opens the file
+    if(returns.open(QFile::ReadOnly | QFile::Text)){
+        qDebug() << "File opened successfully!";
+        QString fileContents = returns.readAll();//reads the text out
+        ui->plainTextEdit_systemLog_returns->setPlainText(fileContents);//chnages the plain text with the output
+    } else {//if openining the file fails
+        qDebug() << "Error opening the file!";
+        QMessageBox::critical(this, "Error", "Unable to open file.");
+    }
+
+}
+
+
+void MainWindow::on_pushButton_new_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(20);
+    //outputs the contents of the vector
+    QString str;
+    for (const Book& book : library.books) {
+        str += book.getTitle() + ", " + book.getAuthor() + "\n";
+    }
+    //replaces the blank text edit with the output
+    ui->plainTextEdit_all_books->setPlainText(str);
 }
 
