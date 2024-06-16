@@ -14,6 +14,8 @@ When the folder is downloaded from GitHub, your computer will have issues with t
 This is done because the existing build folder is set to one of our computers file path locations and this will assign those file paths to yours.
 8. Now go to Build in the tool bar, click clean project and rebuild and hit run. This should now have the app running.
 
+>>In case this stupid line of code reappears, if theres an error with a code from some button called ...feat_book_home_2_clicked, go to the mainwindow header and delete the void function<<<
+
 2.IF IT WAS DEPLOYABLE
 1. Download the Library-systems folder.
 2. Double click the library-systems.exe file
