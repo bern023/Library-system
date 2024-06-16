@@ -36,4 +36,4 @@ USER GUIDE FOR LIBRARY SYSTEM IN QT FRAMEWORK
  1. On the home page you will go to featured books.
  2. Select any book that interests you. When you do, at the bottom of the page there will be two options of ordering and returning books.
  3. When selected these buttons will log the action taken in to the text file.
->>>>>>>>>>>>>>>>>>>>>>^^Bernadette please continue here^^<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
