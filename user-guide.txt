@@ -1,0 +1,36 @@
+USER GUIDE FOR LIBRARY SYSTEM IN QT FRAMEWORK
+1.Login
+2.Admin Management
+3.Homepage
+4.Ordering and returning books
+
+1.Login
+ 1. On first start up no books or users will have been created. (On second start up if users have been added they will be saved)
+ 2. To add a new user, click on the admin button on the first page.
+ 3. This will take you to an admin login screen where you enter "test1" into both the username and password (this can be changed in the "admin.txt" file)
+ 4. For the code enter "abc" and click "Login". (this is only simple for testing purposes)
+  1.1 Login with users added
+     1. Return to the first login page after adding users, and enter a valid username or password and click login.
+
+2.Admin Management
+ 1. Here you will see 3 options: Add or Modify Users, Add or Modify Books and System Logs.
+ Add or Modify Books/Users work mostly the same and have similar layout, so they will be explained at the same time.
+ 2. Click into either books or users and select whether you want to create or modify a book or user.
+ Create a user or book.
+   1. Enter in the User's username and password into the relevant fields/Book's title and author into the relevant fields and click "Add".
+   2. To check if it has been added go to modify books/users.
+ Modify Users
+   1. When clicked the system will output any users that have been written to the text file.
+   2. To edit it you must make sure the text follows this format: username password
+   3. It MUST be written like that for the system to verify it, it must have one space in the middle and then a new line for another user.
+   4. It will automatically update the text file in real time.
+ Modify Books
+   1. This is similar to the users except it must be written or changed in this EXACT format to save to the vector. title, author
+   2. If it's not 2 parts or doesn't have the comma and space it WILL NOT save.
+ System Logs
+  1. When clicked any logs that have been saved will show here.
+
+3.Homepage
+ 1. Here you will see homepage where you can click on the user button to see information on books related to the user, the featured books button and view all books.
+4.Ordering and returning books
+>>>>>>>>>>>>>>>>>>>>>>^^Bernadette please continue here^^<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
