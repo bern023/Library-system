@@ -396,7 +396,7 @@ void MainWindow::on_pushButton_back_feat_book_1_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(7);
+    ui->stackedWidget->setCurrentIndex(2);
 }
 
 
@@ -413,7 +413,7 @@ void MainWindow::on_pushButton_9_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(11);
+    ui->stackedWidget->setCurrentIndex(9);
 }
 
 
