@@ -177,8 +177,6 @@ private slots:
 
     void on_pushButton_feat_book_menu_clicked();
 
-    void on_pushButton_feat_book_home_2_clicked();
-
     void on_pushButton_feat_book_3_back_clicked();
 
     void on_pushButton_feat_book_3_home_clicked();
@@ -219,6 +217,10 @@ private slots:
     void on_pushButton_logs_clicked();
 
     void on_pushButton_new_clicked();
+
+    void on_pushButton_logout_clicked();
+
+    void on_pushButton_returnhomePage_clicked();
 
 private:
     Ui::MainWindow *ui;

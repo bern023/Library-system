@@ -620,7 +620,7 @@ void MainWindow::on_pushbutton_returns_clicked()
     if(file.open(QFile::ReadOnly | QFile::Text)){
         qDebug() << "File opened successfully!";
         QString fileContents = file.readAll();//reads the text out
-        ui->plainTextEdit_Return_books->setPlainText(fileContents);//chnages the plain text with the output
+        ui->plainTextEdit_Return_books->setPlainText(fileContents);//changes the plain text with the output
     } else {//if openining the file fails
         qDebug() << "Error opening the file!";
         QMessageBox::critical(this, "Error", "Unable to open file.");
@@ -717,5 +717,17 @@ void MainWindow::on_pushButton_new_clicked()
     }
     //replaces the blank text edit with the output
     ui->plainTextEdit_all_books->setPlainText(str);
+}
+
+
+void MainWindow::on_pushButton_logout_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+
+void MainWindow::on_pushButton_returnhomePage_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(7);
 }
 
